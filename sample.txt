@@ -1,0 +1,168 @@
+const form=document.getElementById("weatherform");
+const cityinput=document.getElementById("city");
+const weatherresult=document.getElementsByClassName("weatherresults");
+
+const  API_KEY="18433ce325c5c3cd0e0b836217ab0a27";
+
+form.addEventListener("submit", async (event)=> {
+    event.preventDefault();
+
+    const city = cityinput.value.trim();
+
+    if(!city){
+        weatherresult.innerHTML='<p> Please enter a city </p>';
+        return;
+    }
+
+    try{
+        const response=await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units-metric`
+        );
+
+        
+    }
+    catch{
+
+    }
+});
+
+
+
+
+
+const form=document.getElementById("weatherform");
+const cityinput=document.getElementById("city");
+const weatherresult=document.getElementsById("weatherresults");
+
+
+const API_KEY='18433ce325c5c3cd0e0b836217ab0a27';
+
+form.addEventListener("submit", async (event) =>{
+    event.preventDefault();
+
+    const city = cityinput.value.trim();
+
+    if(!city){
+        weatherresult.innerHTML='<p> Please enter a city </p>';
+        return;
+    }
+
+});
+
+
+
+
+
+
+
+<p>Temperature: ${data.main.temp}°C</p>
+            <p>Weather: ${data.weather[0].description}</p>
+            <p>Humidity: ${data.main.humidity}%</p>
+            <p>Wind Speed: ${data.wind.speed} m/s</p>
+        `;
+    } catch (error)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    body{
+    text-align:center;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(./images/weather.jpg);
+    background-size: cover;   
+    background-repeat: no-repeat; 
+    height:auto;
+    
+    
+
+}
+.container{
+     
+     max-width:300px;
+     height: auto;
+     margin: 100px auto;
+    padding: 30px;
+    background-color:  transparent;
+     
+  
+    border:3px solid black;
+    border-radius: 20px;   
+
+}
+.container:hover{
+    max-width:300px;
+    height: auto;
+    margin: 100px auto;
+   padding: 30px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color:white;
+ 
+   border:3px solid black;
+   border-radius: 20px;  
+
+}
+h1{
+    font-size: 30px;
+}
+#weatherform{
+    display: flex;
+    gap:10px;
+}
+#city{
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+}
+#btn{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: rgb(102, 95, 95);
+}
+#weatherresults{
+    margin-top: 20px;
+    text-align: left;
+}
+#weatherresults h2{
+    text-align: center;
+}
+.results{
+    width:50%;
+    margin: auto;
+}
+.weatherresult{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    text-wrap:nowrap;
+}

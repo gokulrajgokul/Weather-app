@@ -1,0 +1,136 @@
+ /* Base CSS (as provided) */
+body {
+    text-align: center;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    background-image: url(./images/weather.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.container {
+    max-width: 300px;
+    height: auto;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.container:hover {
+    max-width: 300px;
+    height: auto;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+#weatherform {
+    display: flex;
+    gap: 10px;
+}
+
+#city {
+    flex: 1;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#btn {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: rgb(102, 95, 95);
+}
+
+#weatherresults {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#weatherresults h2 {
+    text-align: center;
+}
+
+.results {
+    width: 50%;
+    margin: auto;
+}
+
+.weatherresult {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-wrap: nowrap;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #weatherform {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    #weatherresults {
+        text-align: center;
+    }
+
+    .results {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    #city {
+        padding: 8px;
+    }
+
+    #btn {
+        padding: 10px;
+    }
+
+    .results {
+        width: 90%;
+    }
+}
